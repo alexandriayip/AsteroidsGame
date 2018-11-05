@@ -1,3 +1,4 @@
+Spaceship bob = new Spaceship();
 //your variable declarations here
 public void setup() 
 {
@@ -5,6 +6,5 @@ public void setup()
 }
 public void draw() 
 {
-  //your code here
+  bob.show();
 }
-
