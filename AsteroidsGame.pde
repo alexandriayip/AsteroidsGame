@@ -8,21 +8,24 @@ public void setup()
 }
 public void draw() 
 {
+  background (0, 0, 0);
   bob.show();
+  bob.move();
 }
 
 public void keyPressed() {
-  if (key == 'a'){
-    bob.turn(90);
+  if (key == 'a') {
+    bob.turn(10);
   }
-  if (key == 'w'){
-   bob.turn(-90); 
+  if (key == 'w') {
+    bob.turn(-10);
   }
-  if (key == 's'){
-   bob.turn(180);
-  }
-  if(key == 'z'){
-   bob.turn(-180); 
+
+  if (key == 'a') {
+    bob.accelerate(0.2);
   }
   
+  if(key == 'z'){
+    
+  }
 }
