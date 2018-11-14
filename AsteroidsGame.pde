@@ -1,6 +1,6 @@
-
 Spaceship bob = new Spaceship();
 Star[] misty = new Star[100]; 
+Asteroids swan = new Asteroids();
 //your variable declarations here
 public void setup() 
 {
@@ -20,6 +20,8 @@ public void draw()
 
   bob.show();
   bob.move();
+  swan.show();
+  swan.move();
 }
 
 public void keyPressed() {
