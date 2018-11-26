@@ -1,12 +1,16 @@
 Spaceship bob = new Spaceship();
 Star[] misty = new Star[100]; 
-Asteroids swan = new Asteroids();
+Asteroids [] bub = new Asteroids[5];
 //your variable declarations here
 public void setup() 
 {
   size(500, 500);
   for (int i = 0; i < misty.length; i++) {
     misty[i] = new Star();
+  }
+  
+    for (int i = 0; i < bub.length; i++) {
+    bub[i] = new Asteroids();
   }
 
 }
@@ -18,10 +22,13 @@ public void draw()
     misty[i].show();
   }
 
+  for (int i = 0; i < bub.length; i++) {
+    bub[i].show();
+    bub[i].move();
+  }
+  
   bob.show();
   bob.move();
-  swan.show();
-  swan.move();
 }
 
 public void keyPressed() {
@@ -33,7 +40,7 @@ public void keyPressed() {
   }
 
   if (key == 's') {
-    bob.accelerate(0.2);
+    bob.accelerate(1);
   }
 
   if (key == 'z') {
