@@ -1,6 +1,9 @@
 Spaceship bob = new Spaceship();
 Star[] misty = new Star[100]; 
 Asteroids [] bub = new Asteroids[5];
+ArrayList <Asteroids> MikeGira = new ArrayList <Asteroids>();
+
+
 //your variable declarations here
 public void setup() 
 {
@@ -12,6 +15,11 @@ public void setup()
     for (int i = 0; i < bub.length; i++) {
     bub[i] = new Asteroids();
   }
+  
+  for (int i =0; i<10; i++){
+    MikeGira.add(new Asteroids());
+  }
+
 
 }
 
@@ -29,6 +37,14 @@ public void draw()
   
   bob.show();
   bob.move();
+  
+  for(int i = 0; i<10; i++){
+  MikeGira.get(i).show();
+  MikeGira.get(i).move();
+  float remove =dist(bob.getX(),bob.getY(),MikeGira.get(i).getX(), MikeGira.get(i).getY());
+}
+
+
 }
 
 public void keyPressed() {
