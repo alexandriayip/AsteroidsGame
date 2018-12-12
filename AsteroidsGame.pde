@@ -38,22 +38,22 @@ public void draw()
   
   bob.show();
   bob.move();
-  
-  for(int i = 0; i<MikeGira.size(); i++){
+
+  // remove asteroid
+    for(int i = 0; i<MikeGira.size(); i++){
   MikeGira.get(i).show();
   MikeGira.get(i).move();
-  float remove =dist(bob.getX(),bob.getY(),MikeGira.get(i).getX(), MikeGira.get(i).getY());
-  if(remove<30){
+    float e =dist(bob.getX(),bob.getY(),MikeGira.get(i).getX(), MikeGira.get(i).getY());
+  if(e<30){
     MikeGira.remove(i);
+    
+  }
+
   
 }
+    
 
-  }
-for(int i = 0; i<bubba.size(); i++){
-bubba.get(i).show();
-bubba.get(i).move();
-float e = dist(bubba.get(i).getX(),bubba.get(i).getY(), bub.get(i).getX(), bub.get(i).getY());
-}
+
 
 }
 

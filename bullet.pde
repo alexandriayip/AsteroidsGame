@@ -32,7 +32,7 @@ class bullet extends Floater{
 
 
   
-  public void bullet (Spaceship theShip){
+  public bullet (Spaceship theShip){
     myCenterX = 250;
     myCenterY = 250;
     myDirectionX = 5 * Math.cos(5);
