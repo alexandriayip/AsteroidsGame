@@ -29,21 +29,34 @@ class bullet extends Floater{
   public double getPointDirection () {
     return (double) myPointDirection;
   }
+    protected double dRadians;
 
 
   
   public bullet (Spaceship theShip){
     myCenterX = 250;
     myCenterY = 250;
-    myDirectionX = 5 * Math.cos(5);
-    myDirectionY = 5*Math.sin(5);
-    myPointDirection = (Math.PI/180);
+    myPointDirection = 1;
+    double dRadians = myPointDirection*(Math.PI/180);
+    myDirectionX = 5 * Math.cos(dRadians);
+    myDirectionY = 5 * Math.sin(dRadians);
+
+
   }
   
   public void show(){
-    ellipse((int)(Math.random()*501), (int)(Math.random()*501), (int)(Math.random()*5),(int)(Math.random()*5));
+
     fill(255,255,255);
     stroke(255,255,255);
+    ellipse(250,250, (int)(Math.random()*15),(int)(Math.random()*15));
   
   }
+  
+    public void move ()   //move the floater in the current direction of travel
+  {       
+    myCenterX += myDirectionX;    
+    myCenterY += myDirectionY;     
+   
+  }   
+
 }

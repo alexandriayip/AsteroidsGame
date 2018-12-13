@@ -35,7 +35,12 @@ public void draw()
     bub[i].show();
     bub[i].move();
   }
-  
+  //adds bullet
+    for (int j = 0; j < bubba.size(); j++) {
+    bubba.get(j).show();
+    bubba.get(j).move();
+  }
+
   bob.show();
   bob.move();
 
@@ -45,12 +50,11 @@ public void draw()
   MikeGira.get(i).move();
     float e =dist(bob.getX(),bob.getY(),MikeGira.get(i).getX(), MikeGira.get(i).getY());
   if(e<30){
-    MikeGira.remove(i);
-    
+    MikeGira.remove(i);  
   }
-
-  
 }
+
+
     
 
 
