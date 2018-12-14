@@ -82,6 +82,8 @@ public void keyPressed() {
 }
 
 if (key == 'e'){
+
  bubba.add(new bullet(bob)); 
+
 }
 }
